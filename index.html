@@ -1,15 +1,124 @@
 <!doctype html>
 <html>
+
 <head>
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
-  <script src="../platform/platform.js"></script>
-  <link rel="import" href="../polymer/polymer.html">
-  <link rel="import" href="../core-component-page/core-component-page.html">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+	<title>figure-box Demo</title>
+
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+	<script src="bower_components/platform/platform.js"></script>
+	<link rel="import" href="src/figure-box.html">
 
 </head>
+
 <body unresolved>
+	<main class="container">
+		<h1>&lt;figure-box&gt;</h1>
+		<p>Element providing an extensible figure box solution.</p>
+		<div class="jumbotron">
+			<div class="container">
+				<h3>Basic Usage</h3>
+				<div class="col-md-4">
+					<figure-box src="http://lorempixum.com/200/200" caption="Your box" href="#!/">
+						<header>Header content</header>
+						<article>
+							Small text for example, to be showed inside the box.
+						</article>
+						<footer>
+							some links?
+						</footer>
+					</figure-box>
+				</div>
+				<div class="col-md-8">
+					<pre>&lt;figure-box src&equals;&quot;http&colon;&sol;&sol;lorempixum&period;com&sol;200&sol;200&quot; caption&equals;&quot;Your box&quot; href&equals;&quot;&num;&excl;&sol;&quot;&gt;&NewLine;    &Tab;
+	&lt;header&gt;Header content&lt;&sol;header&gt;&NewLine;    &Tab;&lt;article&gt;&NewLine;    &Tab;&Tab;Small text for example&comma; to be showed inside the box&period;&NewLine;    &Tab;&lt;&sol;article&gt;&NewLine;    &Tab;&lt;footer&gt;&NewLine;    &Tab;&Tab;some links&quest;&NewLine;    &Tab;&lt;&sol;footer&gt;&NewLine;    
+&lt;&sol;figure-box&gt;&NewLine;
+</pre>	
+				</div>
+			</div>
+			
+		</div>
 
-  <core-component-page></core-component-page>	
 
+		<p>An `figure-box` looks like this:</p>
+
+		<div class="row">
+			<div class="col-sm-4 col-md-3 col-lg-2 col-xs-6">
+				<figure-box class="" src="http://lorempixum.com/600/600?10">
+					<article>Bootstrap interop</article>
+				</figure-box>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 col-xs-6">
+				<figure-box class="" src="http://lorempixum.com/600/600?10">
+					<header>simple header</header>
+				</figure-box>
+			</div>
+			<div class="col-sm-4 col-md-3 col-lg-2 col-xs-6">
+				<figure-box class="" src="http://lorempixum.com/600/600?11">
+					<footer>simple footer</footer>
+				</figure-box>
+			</div>
+
+			<figure-box class="col-sm-4 col-md-3 col-lg-2 col-xs-6 shadow" src="http://lorempixum.com/600/600?2">
+				<header>shadow</header>
+				<footer>class&equals;&quot;shadow&quot;</footer>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-2 col-xs-6 shadow frame" src="http://lorempixum.com/600/600?3">
+				<header>frame</header>
+				<footer>class&equals;&quot;frame&quot;</footer>
+			</figure-box>
+		</div>
+		
+		<div class="row">
+			<p>Seamless with class&equals;&quot;full-width&quot;</p>
+			<figure-box class="col-sm-4 col-md-3 col-lg-3 col-xs-6 full-width" src="http://lorempixum.com/600/600?4">
+				<header>Header</header>
+				<footer>Footer</footer>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-3 col-xs-6 full-width" src="http://lorempixum.com/600/600?4">
+				<header>Header</header>
+				<footer>Footer</footer>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-3 col-xs-6 full-width" src="http://lorempixum.com/600/600?4">
+				<header>Header</header>
+				<footer>Footer</footer>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-3 col-xs-6 full-width" src="http://lorempixum.com/600/600?4">
+				<header>Header</header>
+				<footer>Footer</footer>
+			</figure-box>
+		</div>
+		
+		<div class="row">
+			<p>Advanced</p>
+			<figure-box class="col-sm-4 col-md-3 col-lg-4 col-xs-6 full-width" src="http://lorempixum.com/600/600?7" caption="Caixa de testes" href="#!/">
+				<header>link caption</header>
+				<footer>href&equals;&quot;&num;&excl;&sol;&quot;</footer>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-4 col-xs-6 full-width" src="http://lorempixum.com/600/600?7" caption="Caixa de texto">
+				<header>Inside content</header>
+				<footer>with &lt;article&gt;&lt;&sol;article&gt;</footer>
+				<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non architecto neque accusantium id ea cupiditate quod cum dolorem rerum asperiores reprehenderit laboriosam harum consequatur sed dolore facilis magnam iste deleniti.</article>
+			</figure-box>
+			<figure-box class="col-sm-4 col-md-3 col-lg-4 col-xs-6 full-width" src="http://lorempixum.com/600/600?8" caption="Caixa de texto">
+				<header>Inside menu</header>				
+				<footer>&lt;ul&gt;&lt;li&gt;&lt;button&gt;&lt;&sol;button&gt;&lt;&sol;li&gt;&lt;&sol;ul&gt;</footer>
+				<menu>
+					<ul>
+						<li>
+							<button>1</button>
+						</li>
+						<li>
+							<button>2</button>
+						</li>
+					</ul>
+				</menu>
+			</figure-box>
+		</div>
+		<hr>
+		Made with &hearts; by <a href="http://fraguto.com.br">Octávio Turra</a> &copy; 2014. Under <a href="http://octavioturra.mit-license.org">MIT License</a>.
+	</main>
 </body>
+
 </html>
