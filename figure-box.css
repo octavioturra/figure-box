@@ -68,7 +68,7 @@ figure content::content article {
 	position: absolute;
 	top: 5em;
 	left: 0;
-	bottom: 2.4em;
+	bottom: 5em;
 	height: auto;
 	overflow: hidden;
 	width: 100%;
@@ -78,41 +78,46 @@ figure content::content article {
 figure:hover content::content article {
 	opacity: 1;
 }
-figure content::content nav {
+figure content::content menu {
+	padding: 0;
 	position: absolute;
 	display: table;
 	top: 5em;
 	left: 0;
-	bottom: 2.4em;
-	height: auto;
-	overflow: hidden;
+	right:0;	
+	bottom: 5em;
+	margin:auto;
 	width: 100%;
+	height: auto;
+	overflow: hidden;	
 	opacity: 0;
 	transition: opacity 200ms ease-in-out;
 }
-figure content::content nav>ul {
+figure content::content menu>ul {
+	padding: 0;
 	display: table-row;
 }
-figure content::content nav>ul>li {
+figure content::content menu>ul>li {
 	display: table-cell;
 	list-style: none;
 	padding: .6em;
+	vertical-align: middle;
 }
-figure content::content nav>ul>li>* {
+figure content::content menu>ul>li>* {
 	width: 100%;
 }
-figure:hover content::content nav {
+figure:hover content::content menu {
 	opacity: 1;
 }
 figure content::content footer {
 	font-weight: bold;
-	line-height: 2em;
+	line-height: 3em;
 	text-indent: .5em;
 	position: absolute;
 	width: 100%;
 	background: white;
-	height: 2.2em;
-	bottom: -2.2em;
+	height: 3em;
+	bottom: -3em;
 	-webkit-transition: bottom 200ms ease-in-out;
 	-moz-transition: bottom 200ms ease-in-out;
 	-ms-transition: bottom 200ms ease-in-out;
@@ -123,13 +128,13 @@ figure:hover content::content>footer {
 	bottom: 0;
 }
 figure content::content>header {
-	line-height: 2em;
+	line-height: 3em;
 	text-indent: .5em;
 	position: absolute;
 	width: 100%;
 	background: white;
-	height: 2.2em;
-	top: -2.2em;
+	height: 3em;
+	top: -3em;
 	-webkit-transition: top 200ms ease-in-out;
 	-moz-transition: top 200ms ease-in-out;
 	-ms-transition: top 200ms ease-in-out;
