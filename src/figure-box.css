@@ -43,7 +43,6 @@ figure {
 	overflow: hidden;
 }
 figure>img {
-	cursor: pointer;
 	margin: 0;
 	bottom: 0;
 	padding: 0;
@@ -105,6 +104,7 @@ figure content::content menu>ul>li {
 }
 figure content::content menu>ul>li>* {
 	width: 100%;
+	cursor: pointer;
 }
 figure:hover content::content menu {
 	opacity: 1;

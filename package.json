@@ -1,6 +1,6 @@
 {
   "name": "figure-box",
-  "version": "0.9.0",
+  "version": "0.9.1",
   "description": "Element providing an extensible figure box solution.",
   "main": "Gruntfile.js",
   "scripts": {
