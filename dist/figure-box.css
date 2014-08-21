@@ -1,0 +1,153 @@
+:host {
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	margin: 0;
+}
+:host(.shadow) figure {
+	box-shadow: 1px 1px 5px #666;
+}
+:host(.frame) figure {
+	border: 10px solid white;
+}
+:host(.full-width) {
+	padding: 0 !Important;
+}
+:host(.full-width) figure {
+	width: 100%;
+}
+:host(.full-width) img {
+	width: 100%;
+}
+h3 {
+	font-size: 1em;
+	text-align: center;
+	color: white;
+	position: absolute;
+	top: 2.3em;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 120ms linear;
+	z-index: 1;
+}
+h3 a {
+	text-decoration: none;
+	color: cyan;
+}
+figure {
+	background: black;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	overflow: hidden;
+}
+figure>img {
+	cursor: pointer;
+	margin: 0;
+	bottom: 0;
+	padding: 0;
+	clear: both;
+	display: block;
+	-webkit-transition: opacity 200ms ease-in-out;
+	-moz-transition: opacity 200ms ease-in-out;
+	-ms-transition: opacity 200ms ease-in-out;
+	-o-transition: opacity 200ms ease-in-out;
+	transition: opacity 200ms ease-in-out;
+	max-width: 100%;
+}
+figure:hover>img {
+	opacity: .5;
+}
+figure:hover h3 {
+	opacity: 1;
+}
+figure content::content article {
+	text-align: center;
+	color: #fefefe;
+	position: absolute;
+	top: 5em;
+	left: 0;
+	bottom: 5em;
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+}
+figure:hover content::content article {
+	opacity: 1;
+}
+figure content::content menu {
+	padding: 0;
+	position: absolute;
+	display: table;
+	top: 5em;
+	left: 0;
+	right:0;
+	bottom: 5em;
+	margin:auto;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	opacity: 0;
+	transition: opacity 200ms ease-in-out;
+}
+figure content::content menu>ul {
+	padding: 0;
+	display: table-row;
+}
+figure content::content menu>ul>li {
+	display: table-cell;
+	list-style: none;
+	padding: .6em;
+	vertical-align: middle;
+}
+figure content::content menu>ul>li>* {
+	width: 100%;
+}
+figure:hover content::content menu {
+	opacity: 1;
+}
+figure content::content footer {
+	font-weight: bold;
+	line-height: 3em;
+	text-indent: .5em;
+	position: absolute;
+	width: 100%;
+	background: white;
+	height: 3em;
+	bottom: -3em;
+	-webkit-transition: bottom 200ms ease-in-out;
+	-moz-transition: bottom 200ms ease-in-out;
+	-ms-transition: bottom 200ms ease-in-out;
+	-o-transition: bottom 200ms ease-in-out;
+	transition: bottom 200ms ease-in-out;
+}
+figure:hover content::content>footer {
+	bottom: 0;
+}
+figure content::content>header {
+	line-height: 3em;
+	text-indent: .5em;
+	position: absolute;
+	width: 100%;
+	background: white;
+	height: 3em;
+	top: -3em;
+	-webkit-transition: top 200ms ease-in-out;
+	-moz-transition: top 200ms ease-in-out;
+	-ms-transition: top 200ms ease-in-out;
+	-o-transition: top 200ms ease-in-out;
+	transition: top 200ms ease-in-out;
+}
+figure:hover content::content>header {
+	top: 0;
+}
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}

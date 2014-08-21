@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/home/octavioturra/Desenvolvimento/PetPatinhas/figure-box/node_modules/grunt/node_modules/minimatch/node_modules/lru-cache/lib/lru-cache.js",
+        "/home/octavioturra/Desenvolvimento/PetPatinhas/figure-box/Gruntfile.js"
+    ]
+}

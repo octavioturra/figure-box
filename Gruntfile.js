@@ -1,29 +1,42 @@
-module.exports = function (grunt) {
-    'use strict';
-    // Project configuration
+module.exports = function(grunt) {
+
     grunt.initConfig({
-			vulcanize: {
-				default: {
-					options: {
-						csp: true,
-						excludes: {
-							imports: [
-								"polymer.html"
-							]
-						}
-					},
-					files: {
-						'dist/figure-box.html': 'src/figure-box.html'
-					},
-				},
-			},
-		})
+        'connect': {
+            demo: {
+                options: {
+                    open: true,
+                    keepalive: true
+                }
+            }
+        },
+        'gh-pages': {
+            options: {
+                clone: 'bower_components/figure-box'
+            },
+            src: [
+                'bower_components/**/*',
+                '!bower_components/figure-box/**/*',
+                'src/*', 'index.html'
+            ]
+        },
+        'replace': {
+            example: {
+                src: ['src/*'],
+                dest: 'dist/',
+                replacements: [{
+                    from: 'bower_components',
+                    to: '..'
+                }]
+            }
+        }
+    });
 
-    // These plugins provide necessary tasks
-		grunt.loadNpmTasks('grunt-vulcanize');	
-	
-    // Default task
-		grunt.registerTask('dist', ['vulcanize']);    
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-gh-pages');
+    grunt.loadNpmTasks('grunt-text-replace');
+
+    grunt.registerTask('build',  ['replace']);
+    grunt.registerTask('deploy', ['gh-pages']);
+    grunt.registerTask('server', ['connect']);
+
 };
-
-
