@@ -10,6 +10,9 @@
 :host(.frame) figure {
 	border: 10px solid white;
 }
+:host(.black-frame){
+
+}
 :host(.full-width) {
 	padding: 0 !Important;
 }
@@ -19,6 +22,11 @@
 :host(.full-width) img {
 	width: 100%;
 }
+:host(.gradient-top){
+
+}
+:host(.gradient-bottom)
+:host()
 h3 {
 	font-size: 1em;
 	text-align: center;
