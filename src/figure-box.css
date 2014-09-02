@@ -135,6 +135,7 @@ figure content::content menu {
 	overflow: hidden;	
 	opacity: 0;
 	transition: opacity 200ms ease-in-out;
+	text-align: center;
 }
 figure content::content menu>ul {
 	padding: 0;
