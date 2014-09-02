@@ -1,6 +1,6 @@
 {
   "name": "figure-box",
-  "version": "0.9.3",
+  "version": "0.9.5",
   "keywords": "seed, polymer, web-components",
   "main": "figure-box.html",
   "ignore": ["bower_components"],

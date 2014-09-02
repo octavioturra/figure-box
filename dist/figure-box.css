@@ -10,6 +10,20 @@
 :host(.frame) figure {
 	border: 10px solid white;
 }
+:host(.black.frame) figure{
+    border-color: black;
+}
+:host(.black) content::content header{
+    background:black;
+    color:white;
+}
+:host(.black) content::content footer{
+    background:black;
+    color:white;
+}
+:host(.black.frame) figure{
+    border-color: black;
+}
 :host(.full-width) {
 	padding: 0 !Important;
 }
@@ -18,6 +32,36 @@
 }
 :host(.full-width) img {
 	width: 100%;
+}
+:host(.fancy) content::content header{
+    background: transparent;
+    text-shadow: 0px 0px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+    font-weight:bolder;
+    color:white;
+}
+:host(.fancy) content::content footer{
+    background:
+        radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%) repeat,
+        linear-gradient(0deg, rgba(255,255,255,0.7), rgba(255,255,255,0)) no-repeat;
+    background-size: 7px 7px, cover;
+    font-weight:lighter;
+    text-shadow: 0px 0px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+    color:white;
+}
+:host(.fancy.black) content::content header{
+    background: transparent;
+    text-shadow: 0px 0px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+    font-weight:bolder;
+    color:white;
+}
+:host(.fancy.black) content::content footer{
+    background:
+        radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 20%, rgba(0,0,0,0) 20%, rgba(0,0,0,0) 100%) repeat,
+        linear-gradient(0deg, rgba(0,0,0,0.7), rgba(0,0,0,0)) no-repeat;
+    background-size: 7px 7px, cover;
+    font-weight:lighter;
+    text-shadow: 0px 0px 5px black, 5px 5px 5px black, -5px -5px 5px black;
+    color:white;
 }
 h3 {
 	font-size: 1em;
